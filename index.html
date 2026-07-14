@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>micro:lab — micro:bit projects</title>
+<meta name="description" content="A showcase of micro:bit projects and games.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap header-inner">
+    <div class="brand">
+      <span class="brand-hole" aria-hidden="true"></span>
+      <span class="brand-name">micro:lab</span>
+    </div>
+    <nav class="site-nav" aria-label="Primary">
+      <a href="#projects">Projects</a>
+      <a href="#about">About</a>
+      <a href="https://github.com/" class="nav-cta" id="ghProfileLink">GitHub</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section class="hero" aria-label="Introduction">
+    <div class="wrap hero-inner">
+      <div class="hero-text">
+        <p class="eyebrow">flash · click · play</p>
+        <h1>Things I've built<br>for the <span class="nowrap">micro:bit.</span></h1>
+        <p class="hero-sub">Games, sensors, and small experiments — every one of them started as 25 red dots on a 5&times;5 grid, same as the one on the right. Click it.</p>
+        <a href="#projects" class="btn btn-primary">See the projects</a>
+      </div>
+
+      <div class="hero-matrix-block">
+        <div class="matrix-board" role="img" aria-label="Interactive micro:bit LED display, click a dot to toggle it">
+          <div class="matrix-grid" id="ledMatrix"></div>
+        </div>
+        <button class="matrix-restart" id="matrixRestart" hidden>&#8635; restart animation</button>
+        <p class="matrix-hint">try clicking a dot</p>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="trace"></div>
+
+  <section id="projects" class="projects-section">
+    <div class="wrap">
+      <h2 class="section-title"><span class="section-num">01</span> Projects</h2>
+      <p class="section-sub">Pulled straight from this repo's GitHub Releases — publish one with a program attached and it shows up here automatically.</p>
+
+      <div class="project-grid" id="projectGrid">
+        <!-- populated by script.js, sourced from this repo's GitHub Releases -->
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap"><hr class="trace"></div>
+
+  <section id="about" class="about-section">
+    <div class="wrap about-inner">
+      <div>
+        <h2 class="section-title"><span class="section-num">02</span> About this board</h2>
+        <p>This page is a hand-wired showcase for BBC micro:bit projects — hosted for free on GitHub Pages, no build step, no framework, no database. Every card above is a live <a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub Release</a> from this repo, fetched straight from GitHub's API.</p>
+        <p>Want to add a new one? Draft a new Release on GitHub, attach your <code>.hex</code> file (or whatever you built), write a short description, publish. Nothing here needs editing — the card builds itself.</p>
+      </div>
+      <div class="pinout-card">
+        <div class="pinout-hole" aria-hidden="true"></div>
+        <div class="pinout-hole" aria-hidden="true"></div>
+        <div class="pinout-hole" aria-hidden="true"></div>
+        <p class="pinout-label">MAKE_CODE // PYTHON // BUILT ON A BREADBOARD</p>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p>micro:lab — built with HTML, CSS &amp; a soldering iron's worth of patience.</p>
+    <p class="footer-sub">Not affiliated with the Micro:bit Educational Foundation.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
